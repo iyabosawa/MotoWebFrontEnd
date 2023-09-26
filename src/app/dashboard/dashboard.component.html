@@ -1,0 +1,97 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<!-- Main content -->
+<div class="content-wrapper" style="padding-top: 20px;">
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Info boxes ROW -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="info-box">
+            <span class="bg-info" style="padding: 20px; border-radius: 5px;"><i class="fas fa-motorcycle fa-5x"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Motos enregistrées</span>
+              <span class="info-box-number">
+                11,024
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <div class="info-box mb-3">
+            <span class="bg-success" style="padding: 20px 30px 20px 30px; border-radius: 5px;"><i class="fas fa-thumbs-up fa-5x"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Motos validées</span>
+              <span class="info-box-number">4,143</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Info boxes -->
+      <div class="row">
+
+        <!-- fix for small devices only -->
+        <div class="clearfix hidden-md-up"></div>
+
+        <div class="col-sm-6">
+          <div class="info-box mb-3">
+            <span class="bg-danger" style="padding: 20px 40px 20px 40px; border-radius: 5px;"><i class="fas fa-file fa-5x"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Autocollants Récupérés</span>
+              <span class="info-box-number">760</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <div class="info-box mb-3">
+            <span class="bg-warning" style="padding: 20px; border-radius: 5px;"><i class="fas fa-users fa-5x" style="color: white;"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Agents enregistreurs</span>
+              <span class="info-box-number">50</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+    </div><!--/. container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+  <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+
+<app-footer></app-footer>
+
+<router-outlet></router-outlet>
+<script>
+  const PAGE = '/dashboard'; // Remplacez 'index' par la valeur appropriée
+
+  const indexLink = document.getElementById('indexLink');
+
+  if (PAGE === '/dashboard') {
+    indexLink.classList.add('active');
+  }
+</script>

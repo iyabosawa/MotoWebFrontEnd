@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container d-flex justify-content-center">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="assets/login/hoteldeville.png" alt="" width="60" height="60">
+
+      </a>
+        <h6>
+          HOTEL DE VILLE DE KINSHASA
+          <br>
+          <strong>
+            MINISTERE DE TRANSPORT ET <br> VOIE DE COMMUNICATION
+          </strong>
+        </h6>
+
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+      <div class="col-md-4 mx-auto">
+          <h1 class="text-center text-muted mb-3 mt-5">
+              SE CONNECTER
+          </h1>
+          <p class="text-center text-muted mb-5">
+              Connection à l'espace administration
+          </p>
+          <form method="POST" action="http://127.0.0.1:8000/login">
+              <input type="hidden" name="_token" value="CpHpH7ZPLBEcY9ROpOB2Cd9W9POFn3F1OBa6ZD9Y">
+
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" class="form-control mb-3 " value="" required autocomplete="email" autofocus>
+
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" class="form-control mb-3 " required autocomplete="current-password" >
+
+              <div class="row mb-3">
+                  <div class="col-md-6 text-start">
+                      <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="remember" name="remember" >
+                          <label class="form-check-label" for="remember">Remember me</label>
+                      </div>
+                  </div>
+                  <div class="col-md-6 text-end">
+                      <a href="#">Mot de passe oublié ?</a>
+                  </div>
+              </div>
+              <div class="d-grid gap-2">
+                  <button class="btn btn-primary col-12" type="submit">Conneter</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,200 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<!-- Main content -->
+<div class="content-wrapper" style="padding-top:20px">
+  <section class="content">
+    <div class="container-fluid">
+
+  <div class="row">
+  <div class="col-12">
+  <div class="card">
+  <div class="card-header clearfix">
+    <div class="card-tools float-left">
+        <form class="input-group input-group-sm" id="formListSearch">
+            <input type="text" name="search" class="form-control float-right" placeholder="Recherche..." value="" />
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="card-tools float-right">
+      <a [routerLink]="['/ajouter-agent']" class="btn btn-success"><i class="fa fa-plus"></i> Ajouter</a>
+      <a [routerLink]="['/modifier-agent']" class="btn btn-primary ml-2"><i class="fa fa-edit"></i> Modifier</a>
+      <button type="button" class="btn btn-danger ml-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-trash"></i> Supprimer</button>
+    </div>
+  </div>
+
+  <div class="card-body table-responsivee p-0">
+    <div class="small text-right text-muted px-2">117126 élément(s)</div>
+    <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+              <th style="width:50px;">
+                <input type="checkbox" name="" id="" class="check_input_all">
+              </th>
+              <th>Noms</th>
+              <th>Sexe</th>
+              <th>Téléphone</th>
+              <th>Rôle</th>
+              <th>Matricule</th>
+              <th>Nbres Motos Enregistrées</th>
+              <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" name="" id="" class="check_input">
+            </td>
+            <td>Pascal Safari</td>
+            <td>M</td>
+            <td>+24300000000000</td>
+            <td>Agent</td>
+            <td>205.323</td>
+            <td>1232</td>
+            <td>
+              <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalAgent"><i class="fa fa-eye"></i></button>
+              <a [routerLink]="['/modifier-agent']" class="btn btn-sm btn-warning ml-1"><i class="fa fa-edit" style="color:white;"></i></a>
+              <a href="" class="btn-danger ml-1 mt-3" style="padding: 3px 10px 7px 10px; border-radius:3px;"><i class="fa fa-trash"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" id="" class="check_input">
+            </td>
+            <td>Pascaline Safari</td>
+            <td>F</td>
+            <td>+2430000000000</td>
+            <td>Agent</td>
+            <td>232.424</td>
+            <td>345</td>
+            <td>
+              <a href="" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
+              <a href="" class="btn btn-sm btn-warning ml-1"><i class="fa fa-edit" style="color:white;"></i></a>
+              <a href="" class="btn-danger ml-1 mt-3" style="padding: 1px 10px 7px 10px; border-radius:3px;"><i class="fa fa-trash"></i></a>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+
+  <div class="card-footer clearfix">
+                    <nav>
+  <ul class="pagination">
+
+                <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Précédent">
+        <span class="page-link" aria-hidden="true">&lsaquo;</span>
+    </li>
+
+
+    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+    <li class="page-item"><a class="page-link" href="">2</a></li>
+    <li class="page-item"><a class="page-link" href="">3</a></li>
+    <li class="page-item"><a class="page-link" href="">4</a></li>
+    <li class="page-item"><a class="page-link" href="">5</a></li>
+    <li class="page-item"><a class="page-link" href="">6</a></li>
+    <li class="page-item"><a class="page-link" href="">7</a></li>
+    <li class="page-item"><a class="page-link" href="">8</a></li>
+    <li class="page-item"><a class="page-link" href="">9</a></li>
+    <li class="page-item"><a class="page-link" href="">10</a></li>
+    <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+    <li class="page-item"><a class="page-link" href="">2342</a></li>
+    <li class="page-item"><a class="page-link" href="">2343</a></li>
+    <li class="page-item">
+        <a class="page-link" href="https://bankofproducts.com/admin/users?page=2" rel="next" aria-label="Suivant &raquo;">&rsaquo;</a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+  </div>
+  </div>
+  </div>
+
+  <style>
+  .pagination {justify-content: center; margin: 0}
+  </style>
+
+  <script>
+  $(function(){
+
+  $(document).on('change', '.check_input_all', function(){
+  if ( $(this).is(':checked') ) {
+    $('.check_input').prop('checked', true);
+  } else {
+    $('.check_input').prop('checked', false);
+  }
+  });
+
+  function get_checked() {
+  var ids = '';
+  $('.check_input:checked').each(function(){
+    ids += ($(this).val() + ',');
+  });
+  return ids;
+  }
+
+
+  });
+  </script>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Voudriez-vous supprimer cet(te) agent(e)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <tr class="row">
+                <td><strong>Noms:</strong> Pascal Safari</td>
+                <td><strong>Sexe:</strong> M</td>
+                <td><strong>Téléphone:</strong> +2430000000000</td>
+                <td><strong>Rôle:</strong> Agent</td>
+                <td><strong>Matricule:</strong> 205.323</td>
+              </tr>
+            </div>
+            <div class="modal-footer center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal show agent -->
+      <div class="modal fade" id="exampleModalAgent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" style="text-transform: uppercase;">Information de l'agent</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <tr class="row">
+                <td>Nom: <strong>Safari</strong></td>
+                <td>Post-nom: <strong>Safari</strong></td>
+                <td>Prénom: <strong>James</strong></td>
+                <td>Date de naissance: <strong>1 Janvier 2000</strong></td>
+                <td>Sexe: <strong>M</strong></td>
+                <td>Téléphone: <strong>+243000000000</strong></td>
+                <td>Adresse: <strong>13, Kananga, Kindele, Mont-ngafula</strong></td>
+                <td>Rôle: <strong>Agent</strong></td>
+                <td><strong>Matricule:</strong> 205.323</td>
+                <td>Username: <strong>jamessafari</strong></td>
+                <td>Password: <strong>Jamessafari14</strong></td>
+              </tr>
+            </div>
+            <div class="modal-footer center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

@@ -1,0 +1,109 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<!-- Main content -->
+<div class="content-wrapper" style="padding-top:20px">
+  <section class="content">
+    <div class="container-fluid">
+
+      <h2 class="text-center"style="text-transform:uppercase;">Enregistrement agent</h2>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <div class="card card-primary clearfix p-5">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" name="nom" class="form-control" id="nom">
+              </div>
+              <div class="col-md-6">
+                <label for="postnom" class="form-label">Post-nom</label>
+                <input type="text" name="postnom" class="form-control" id="postnom">
+              </div>
+              <div class="col-md-6">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" name="prenom" class="form-control" id="prenom">
+              </div>
+              <div class="col-md-6">
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="phone" name="telephone" class="form-control" id="telephone">
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Sexe</label>
+                  <select class="custom-select">
+                    <option>Masculin</option>
+                    <option>Feminin</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="date" class="form-label">Date de naissance</label>
+                <input type="date" name="date" class="form-control" id="date">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Addresse</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <hr>
+              <div class="col-md-6">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" id="username">
+              </div>
+              <div class="col-md-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password">
+              </div>
+              <hr>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label>Type agent</label>
+                  <select class="custom-select">
+                    <option>Agent 1</option>
+                    <option>Agent 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Numéro Matricule</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Ex: 256.132">
+              </div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-center" id="exampleModalLabel" style="color:#28a745"><i class="fa fa-check"></i> Agent enregistré</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>L'agent dont les informations sont réprises ci-dessous est enregistré</h5>
+        <tr class="row">
+          <td><strong>Noms:</strong> Pascal Safari</td>
+          <td><strong>Sexe:</strong> M</td>
+          <td><strong>Téléphone:</strong> +2430000000000</td>
+          <td><strong>Rôle:</strong> Agent</td>
+          <td><strong>Matricule:</strong> 205.323</td>
+        </tr>
+      </div>
+      <div class="modal-footer center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-success">Voir</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

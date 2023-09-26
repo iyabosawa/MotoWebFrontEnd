@@ -1,0 +1,164 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<!-- Main content -->
+<div class="content-wrapper" style="padding-top:20px">
+  <section class="content">
+    <div class="container-fluid">
+
+  <div class="row">
+  <div class="col-12">
+  <div class="card">
+  <div class="card-header clearfix">
+    <div class="card-tools float-left">
+        <form class="input-group input-group-sm" id="formListSearch">
+            <input type="text" name="search" class="form-control float-right" placeholder="Recherche..." value="" />
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="card-tools float-right">
+                                            </div>
+  </div>
+  <div class="card-body table-responsivee p-0">
+    <div class="small text-right text-muted px-2">117126 élément(s)</div>
+    <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+              <th style="width:50px;">
+                <input type="checkbox" name="" id="" class="check_input_all">
+              </th>
+              <th>Proprietaire</th>
+              <th>Chauffeur</th>
+              <th>Marque Moto</th>
+              <th>Matricule</th>
+              <th>Status</th>
+              <th>Impression</th>
+              <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" name="" id="" class="check_input">
+            </td>
+            <td>Pascal Safari</td>
+            <td>Bernard MWAMBA</td>
+            <td>TVS XYZ</td>
+            <td>A10912</td>
+            <td>
+              <a href="" class="btn btn-sm btn-success">Payé</a>
+            </td>
+            <td>OUI</td>
+            <td>
+              <a href="" class="btn btn-sm btn-danger"><i class="fa fa-eye"></i></a>
+              <a href="" class="btn btn-sm btn-warning ml-1"><i class="fa fa-edit" style="color:white;"></i></a>
+              <a href="" class="btn-success ml-1" style="padding: 2px 10px 7px 10px;border-radius: 3px;"><i class="fa fa-print" ></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" id="" class="check_input">
+            </td>
+            <td>Pascal Safari</td>
+            <td>Bernard MWAMBA</td>
+            <td>TVS XYZ</td>
+            <td>A10912</td>
+            <td>
+              <a href="" class="btn btn-sm btn-success">Payé</a>
+            </td>
+            <td>NON</td>
+            <td>
+              <a href="" class="btn btn-sm btn-danger"><i class="fa fa-eye"></i></a>
+              <a href="" class="btn btn-sm btn-warning ml-1"><i class="fa fa-edit" style="color:white;"></i></a>
+              <a href="" class="btn-success ml-1" style="padding: 2px 10px 7px 10px;border-radius: 3px;"><i class="fa fa-print" ></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" id="" class="check_input">
+            </td>
+            <td>IYA BOSAWA</td>
+            <td>Bernard MWAMBA</td>
+            <td>TVS XYZ</td>
+            <td>A10912</td>
+            <td>
+              <a href="" class="btn btn-sm btn-success">Payé</a>
+            </td>
+            <td>NON</td>
+            <td>
+              <a href="" class="btn btn-sm btn-danger"><i class="fa fa-eye"></i></a>
+              <a href="" class="btn btn-sm btn-warning ml-1"><i class="fa fa-edit" style="color:white;"></i></a>
+              <a href="" class="btn-success ml-1" style="padding: 2px 10px 7px 10px;border-radius: 3px;"><i class="fa fa-print" ></i></a>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+
+  <div class="card-footer clearfix">
+                    <nav>
+  <ul class="pagination">
+
+                <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Précédent">
+        <span class="page-link" aria-hidden="true">&lsaquo;</span>
+    </li>
+
+
+    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+    <li class="page-item"><a class="page-link" href="">2</a></li>
+    <li class="page-item"><a class="page-link" href="">3</a></li>
+    <li class="page-item"><a class="page-link" href="">4</a></li>
+    <li class="page-item"><a class="page-link" href="">5</a></li>
+    <li class="page-item"><a class="page-link" href="">6</a></li>
+    <li class="page-item"><a class="page-link" href="">7</a></li>
+    <li class="page-item"><a class="page-link" href="">8</a></li>
+    <li class="page-item"><a class="page-link" href="">9</a></li>
+    <li class="page-item"><a class="page-link" href="">10</a></li>
+    <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+    <li class="page-item"><a class="page-link" href="">2342</a></li>
+    <li class="page-item"><a class="page-link" href="">2343</a></li>
+    <li class="page-item">
+        <a class="page-link" href="https://bankofproducts.com/admin/users?page=2" rel="next" aria-label="Suivant &raquo;">&rsaquo;</a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+  </div>
+  </div>
+  </div>
+
+  <style>
+  .pagination {justify-content: center; margin: 0}
+  </style>
+
+  <script>
+  $(function(){
+
+  $(document).on('change', '.check_input_all', function(){
+  if ( $(this).is(':checked') ) {
+    $('.check_input').prop('checked', true);
+  } else {
+    $('.check_input').prop('checked', false);
+  }
+  });
+
+  function get_checked() {
+  var ids = '';
+  $('.check_input:checked').each(function(){
+    ids += ($(this).val() + ',');
+  });
+  return ids;
+  }
+
+
+  });
+  </script>
+
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
